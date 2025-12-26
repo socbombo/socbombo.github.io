@@ -1,0 +1,219 @@
+[
+    {
+        "id": "btnHome",
+        "vn": "Trang chủ",
+        "en": "Home"
+    },
+    {
+        "id": "btnInfo",
+        "vn": "Thông tin",
+        "en": "Info"
+    },
+    {
+        "id": "btnMap",
+        "vn": "Bản đồ",
+        "en": "Maps"
+    },
+    {
+        "id": "btnSttings",
+        "vn": "Cài đặt",
+        "en": "Settings"
+    },
+    {
+        "id": "popup-title-settings",
+        "vn": "Cài đặt",
+        "en": "Settings"
+    },
+    {
+        "id": "l_language",
+        "vn": "Ngôn ngữ",
+        "en": "Language"
+    },
+    {
+        "id": "l_sound",
+        "vn": "Âm thanh",
+        "en": "Sound"
+    },
+    {
+        "id": "l_vr",
+        "vn": "VR",
+        "en": "VR"
+    },
+    {
+        "id": "l_planet",
+        "vn": "Planet View",
+        "en": "Planet View"
+    },
+    {
+        "id": "l_fullscreen",
+        "vn": "Toàn màn hình",
+        "en": "Fullscreen"
+    },
+    {
+        "id": "l_share",
+        "vn": "Chia sẻ",
+        "en": "Share"
+    },
+    {
+        "id": "map_lable",
+        "vn": "Khu Bảo tồn Văn hóa dân tộc S'tiêng: Sóc Bom Bo",
+        "en": "S'tiêng Ethnic Culture Preservation Area in Bom Bo"
+    },
+    {
+        "id": "popup-title-3d",
+        "vn": "Danh sách hiện vật",
+        "en": "List of artifacts"
+    },
+    {
+        "id": "danda",
+        "vn": "Bộ Đàn đá",
+        "en": "Stone musical instrument"
+    },
+    {
+        "id": "dir_danda",
+        "vn": "Bộ đàn đá nặng 20 tấn, với 20 thanh, được đặt tại Khu bảo tồn văn hóa dân tộc X'tiêng sóc Bom Bo. Đây là tác phẩm nghệ thuật độc đáo của nghệ nhân Trương Đình Chiếu, với thanh nhẹ nhất nặng 250kg và thanh nặng nhất lên đến 400kg. Để trình diễn bộ đàn đồ sộ này, cần đến 4 người cùng đánh. Được công nhận kỷ lục gia bộ đàn đá lớn nhất vào năm 2022",
+        "en": "The stone xylophone weighs 20 tons, consisting of 20 bars, and is located in the S'Tiêng Ethnic Cultural Preservation Area in Bom Bo. This is a unique work of art by craftsman Trương Đình Chiếu, with the lightest bar weighing 250 kg and the heaviest bar reaching up to 400 kg. To perform this massive xylophone, four people are needed to play it together. Recognized as the largest stone xylophone record holder in 2022."
+    },
+    {
+        "id": "congchieng",
+        "vn": "Bộ Cồng Chiêng",
+        "en": "Gong Set"
+    },
+    {
+        "id": "dir_congchieng",
+        "vn": "Bộ cồng 6 cái, bộ chiêng 6 cái, nặng 160-700 kg. Chất liệu: đồng đỏ, thiếc. Được công nhận kỷ lục gia bộ cồng lớn nhất năm 2023.",
+        "en": "A set of 6 gongs and 6 bronze drums, weighing 160-700 kg. Material: red copper and tin. Recognized as the largest gong set record holder in 2023."
+    },
+    {
+        "id": "home_text",
+        "vn": "Khu bảo tồn văn hóa dân tộc S'Tiêng sóc Bom Bo",
+        "en": "S'Tiêng Ethnic Culture Preservation Area in Bom Bo Hamlet"
+    },
+    {
+        "id": "home_dir",
+        "vn": "Sóc Bom Bo thuộc địa phận thôn Bom Bo, xã Bình Minh, huyện Bù Đăng.</br>Sóc Bom Bo có 5 dân tộc sinh sống, nhiều nhất là đồng bào S’Tiêng.",
+        "en": "Bom Bo Hamlet is located in Bom Bo Village, Binh Minh Commune, Bu Dang District. Bom Bo Hamlet is home to five ethnic groups, with the largest being the S'Tiêng people."
+    },
+    {
+        "id":"btnguide",
+        "vn":"Hướng dẫn",
+        "en":"Guide"
+    }, 
+    {
+        "id": "popup-instruction1",
+        "vn": "Hướng dẫn",
+        "en": "Mouse Instructions for 360 Photos"
+    },
+    {
+        "id": "popup-rotate",
+        "vn": "Chạm và kéo để xoay ảnh",
+        "en": "Drag to rotate the photo"
+    },
+    {
+        "id": "popup-zoom-in",
+        "vn": "Dùng 2 ngón tay kéo ra để phóng to",
+        "en": "Spread to zoom in"
+    },
+    {
+        "id": "popup-zoom-out",
+        "vn": "Dùng 2 ngón tay kéo vào để thu nhỏ",
+        "en": "Pinch or pinch out to zoom out"
+    },
+    {
+        "id": "info_1",
+        "vn": "Khu Bảo tồn Văn hóa dân tộc S'tiêng: Sóc Bom Bo",
+        "en": "S'Tiêng Ethnic Cultural Preservation Area in Bom Bo"
+    },
+    {
+        "id": "info_2",
+        "vn": "Giới Thiệu",
+        "en": "Introduction"
+    },
+    {
+        "id": "info_3",
+        "vn": "Khu bảo tồn văn hóa dân tộc S'tiêng Sóc Bom Bo gồm 2 khu vực. Nhà đón tiếp phía trong có phòng trưng bày. Đây là khu vực nằm giữa đoạn đường chính 11m (đường lớn từ đường ĐT 760 rẽ vào qua cổng chào Khu bảo tồn) với quy mô khoảng 1200 m², kiến trúc cây xanh cảnh quan được thiết kế theo hình chữ U với các không gian sân vườn, cảnh quan ở giữa. Với các cửa lớn thuận lợi cho việc trưng bày, giới thiệu những sản phẩm và những nét độc đáo của dân tộc vùng cao. Kiểu kiến trúc đơn giản, hòa nhập và tạo sự gần gũi với thiên nhiên môi trường.",
+        "en": "The S'tiêng ethnic culture conservation area in Sóc Bom Bo consists of two areas. The reception house inside has an exhibition room. It is located between the main road (11m wide, the large road branching from DT 760 through the entrance of the conservation area) with a scale of about 1,200 m², designed in a U shape with landscaped green spaces in the middle. With large doors facilitating the display and introduction of products and unique features of the highland ethnic groups. The architectural style is simple, blending in and creating a sense of closeness to the natural environment."
+    },
+    {
+        "id": "info_4",
+        "vn": "Khu Vực Sân Lễ Hội",
+        "en": "Festival Area"
+    },
+    {
+        "id": "info_5",
+        "vn": "Phía trên là khu vực sân lễ hội gồm các công trình xây dựng kèm theo:",
+        "en": "Above is the festival area, consisting of accompanying constructions:"
+    },
+    {
+        "id": "info_6",
+        "vn": "- Nhà Dài",
+        "en": "Long House"
+    },
+    {
+        "id": "info_7",
+        "vn": "Một nét văn hóa mang đậm bản sắc vùng cao, nhà dài với thiết kế kiến trúc một tầng, chiều rộng khoảng 15m, chiều dài khoảng 35m với mái 2 dốc phủ gần xuống mặt đất. Không gian phía trong được bố trí rộng rãi, không hạn chế. Nơi đây được bố trí để phục vụ các lễ hội truyền thống của dân tộc Bom Bo với lễ hội trọi trâu. Hai nhà dài quay mặt vào sân lớn, nơi sẽ diễn ra các hoạt động ngoài trời đặc sắc cũng như lễ hội trọi trâu điển hình.",
+        "en": "A cultural feature that embodies the identity of the highland region, the long house is designed as a single-story building, approximately 15m wide and 35m long, with a two-slope roof nearly touching the ground. The interior space is spacious and unrestricted. This area is arranged to serve the traditional festivals of the Bom Bo ethnic group, including the buffalo fighting festival. Two long houses face the large courtyard, where distinctive outdoor activities and the typical buffalo fighting festival will take place."
+    },
+    {
+        "id": "info_8",
+        "vn": "- Khu Hoạt Động Ngoài Trời",
+        "en": "- Outdoor Activity Area"
+    },
+    {
+        "id": "info_9",
+        "vn": "Nơi sinh hoạt cộng đồng của dân tộc S’Tiêng, nơi diễn ra các lễ hội, các hoạt động ca múa hát mang đậm bản sắc riêng trong quá trình hình thành và phát triển.",
+        "en": "A community gathering place for the S'Tiêng ethnic group, where festivals and cultural performances rich in their unique identity occur during their formation and development."
+    },
+    {
+        "id": "info_10",
+        "vn": "- Nhà Sinh Hoạt Cộng Đồng",
+        "en": "- Community Activity House"
+    },
+    {
+        "id": "info_11",
+        "vn": "Để phục vụ nhu cầu văn hóa của nhân dân địa phương và du khách. Bao gồm 1 vườn cây xuân hồng và 1 nhà bán hàng lưu niệm bán các mặt hàng đặc trưng của người dân tộc S'Tiêng.",
+        "en": "To serve the cultural needs of the local people and visitors. It includes a spring garden and a souvenir shop selling typical products of the S'Tiêng ethnic group."
+    },
+    {
+        "id": "info_12",
+        "vn": "- Nhà Làng Nghề Truyền Thống",
+        "en": "- Traditional Craft Village House"
+    },
+    {
+        "id": "info_13",
+        "vn": "Có 4 nghề: dệt thổ cẩm, đan gùi, nấu rượu cần, nghề may. Trong đó nghề dệt thổ cẩm và nghề đan gùi được công nhận di sản văn hóa phi vật thể.",
+        "en": "There are four craft houses: brocade weaving, basket weaving, brewing traditional rice wine, and sewing. Among these, the brocade weaving and basket weaving crafts have been recognized as intangible cultural heritage."
+    },
+    {
+        "id": "info_14",
+        "vn": "Bộ Công Cụ Âm Nhạc",
+        "en": "Musical Instruments"
+    },
+    {
+        "id": "info_15",
+        "vn": "Bộ Đàn Đá",
+        "en": "Stone Instrument Set"
+    },
+    {
+        "id": "info_16",
+        "vn": "Chất liệu: đá ben, xuất xứ: đá Bù Đăng, trọng lượng: 20 tấn mỗi thanh 400-600 kg, kích thước dài từ 1m-1.6m. Các thanh có độ dài không bằng nhau, được công nhận kỷ lục gia lớn nhất năm 2022.",
+        "en": "Material: Ben stone, origin: Bù Đăng stone, weight: 20 tons each, 400-600 kg per piece, length from 1m to 1.6m. The pieces vary in length and are recognized as the largest record holder in 2022."
+    },
+    {
+        "id": "info_17",
+        "vn": "Bộ Cồng Chiêng",
+        "en": "Gong Set"
+    },
+    {
+        "id": "info_18",
+        "vn": "Bộ cồng 6 cái, bộ chiêng 6 cái, nặng 160-700 kg. Chất liệu: đồng đỏ, thiếc. Được công nhận kỷ lục gia bộ cồng lớn nhất năm 2023.",
+        "en": "A set of 6 gongs and 6 bronze drums, weighing 160-700 kg. Material: red copper and tin. Recognized as the largest gong set record holder in 2023."
+    },
+    {
+        "id": "info_19",
+        "vn": "Khu bảo tồn Văn hóa dân tộc S'tiêng, sóc Bom Bo vào tốp 50 công trình kiến trúc tiêu biểu do Hội kiến trúc sư Việt Nam bình chọn nhân dịp kỷ niệm 50 năm ngày giải phóng Miền Nam, thống nhất đất nước.",
+        "en": "The Cultural Preservation Area of the S'tiêng ethnic group, Bom Bo village, is among the top 50 outstanding architectural works selected by the Vietnam Association of Architects on the occasion of the 50th anniversary of the liberation of the South and the reunification of the country."
+    }
+    
+    
+]

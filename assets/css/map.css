@@ -1,0 +1,448 @@
+#mapPage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/images/UI/Map.png'); /* Replace with your image URL */
+  background-size: contain; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  display: flex; /* Use flexbox to center the dialog */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: rgb(26, 26, 26);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Styles for the parent div */
+.parent-div {
+  position: relative; /* Set positioning for the parent div */
+  width: 100%; /* Set a width for the parent div */
+  height: auto; /* Set a height for the parent div */
+  border: 1px solid #ccc; /* Add a border for visibility */
+}
+
+/* Styles for the background image */
+.background-image {
+  width: 100%; /* Make the background image fill the parent div */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.pin-image {
+  position: absolute; /* Fix the position */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  width: 100px; /* Set width */
+  height: 100px; /* Set height */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+
+.map {
+  display: inline-block;
+  /* margin: 1em auto; */
+  position: fixed;
+  border: 1px solid grey;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 50px;
+}
+
+.map img {
+  max-width:100%;
+  max-height:100vh;
+display: block;
+}
+
+.rpin {
+  position: absolute;
+  display: block;
+  width: 3%;
+  height: 3%;
+  background: url('/assets/images/UI/Pin.png') no-repeat center center;
+  background-size: contain;
+  transform: translateX(-50%) translateY(0);
+  filter: brightness(1) contrast(1.1);
+  transition: all .3s ease;
+}
+.rpin:hover {
+  cursor: pointer;
+  transform: translateX(-50%) scale(2.5);
+}
+.code-warszawa {
+  bottom: 55.9282%;
+  left: 65.5994%;
+}
+.code-001 {
+  bottom: 18.3%;
+  left: 27.3%;
+}
+.code-002 {
+  bottom: 41.3%;
+  left: 68.3%;
+}
+.code-003 {
+  bottom: 85.3%;
+  left: 64.3%;
+}
+.code-004 {
+  bottom: 18.3%;
+  left: 30.3%;
+}
+.code-007 {
+  bottom: 39%;
+  left: 69%;
+}
+.code-008 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-009 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-010 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-012 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-013 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-014 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-015 {
+  bottom: 79%;
+  left: 63%;
+}
+.code-016 {
+  bottom: 79%;
+  left: 63%;
+}.code-017 {
+  bottom: 79%;
+  left: 63%;
+}
+
+.code-038 {
+  bottom: 48%;
+  left: 15.5%;
+}
+.code-039 {
+  bottom: 36%;
+  left: 69%;
+}
+.code-025 {
+  bottom: 34%;
+  left: 44.5%;
+}
+.code-024 {
+  bottom: 40%;
+  left: 44.5%;
+}
+.code-026 {
+  bottom: 39.5%;
+  left: 44.5%;
+}
+.code-029-1 {
+  bottom: 37.5%;
+  left: 50%;
+}
+.code-030{
+  bottom: 35%;
+  left: 76.0%;
+}
+.code-031{
+  bottom: 85.7%;
+  left: 62.3%;
+}
+.code-032{
+  bottom: 68%;
+  left: 32.5%;
+}
+.code-033{
+  bottom: 77%;
+  left: 55.0%;
+}
+.code-034{
+  bottom: 76%;
+  left: 63.0%;
+}
+.code-035{
+  bottom: 47%;
+  left: 35.0%;
+}
+.code-036 {
+  bottom: 78%;
+  left: 61.0%;
+}
+.code-037{
+  bottom: 43%;
+  left: 70%;
+}
+.code-038{
+  bottom: 83.7%;
+  left: 61.4%;
+}
+
+.code-102 {
+  bottom: 50%;
+  left: 34%;
+}
+.code-103 {
+  bottom: 70.7%;
+  left: 37.4%;
+}
+.code-104 {
+  bottom: 81.7%;
+  left: 60.4%;
+}
+.code-105 {
+  bottom: 75.7%;
+  left: 61.5%;
+}
+.code-106 {
+  bottom: 18.7%;
+  left: 29.4%;
+}
+.code-107 {
+  bottom: 74.5%;
+  left: 60.0%;
+}
+.code-108 {
+  bottom: 36.5%;
+  left: 72.4%;
+}
+.code-109 {
+  bottom: 83.7%;
+  left: 61.4%;
+}
+.code-110 {
+  bottom: 63.7%;
+  left: 55.4%;
+}
+.code-111 {
+  bottom: 80.7%;
+  left: 65.4%;
+}
+.code-112 {
+  bottom: 70.7%;
+  left: 55.4%;
+}
+.code-113 {
+  bottom: 35.7%;
+  left: 70.66%;
+}
+.code-114 {
+  bottom: 41%;
+  left: 69.7%;
+}
+.code-115 {
+  bottom: 83.7%;
+  left: 61.4%;
+}
+.code-116 {
+  bottom: 50%;
+  left: 78%;
+}
+.code-117 {
+
+    bottom: 70.7%;
+  left: 77.4%;
+}
+.code-118 {
+  bottom: 83.7%;
+  left: 61.4%;
+}
+.code-119 {
+  bottom: 82%;
+  left: 63.6%;
+}
+
+
+
+.code-201 {
+  bottom: 72%;
+  left: 32.5%;
+}
+.code-202 {
+  bottom: 66%;
+  left: 32.5%;
+}
+.code-203 {
+  bottom: 60%;
+  left: 32.5%;
+}
+.code-204 {
+  bottom: 54%;
+  left: 32.5%;
+}
+.code-205 {
+  bottom: 48%;
+  left: 32.5%;
+}
+.code-206 {
+  bottom: 42%;
+  left: 32.5%;
+}
+.code-207 {
+  bottom: 36%;
+  left: 32.5%;
+}
+.code-208 {
+  bottom: 30%;
+  left: 32.5%;
+}
+.code-209 {
+  bottom: 72%;
+  left: 80.6%;
+}
+.code-210 {
+  bottom: 66%;
+  left: 80.6%;
+}
+.code-211 {
+  bottom: 60%;
+  left: 80.6%;
+}
+.code-212 {
+  bottom: 54%;
+  left: 80.6%;
+}
+.code-213 {
+  bottom: 48%;
+  left: 80.6%;
+}
+.code-214 {
+  bottom: 42%;
+  left: 80.6%;
+}
+.code-215 {
+  bottom: 36%;
+  left: 80.6%;
+}
+.code-216 {
+  bottom: 30%;
+  left: 80.6%;
+}
+
+.code-301 {
+  bottom: 72%;
+  left: 32.5%;
+}
+.code-302 {
+  bottom: 66%;
+  left: 32.5%;
+}
+.code-303 {
+  bottom: 60%;
+  left: 32.5%;
+}
+.code-304 {
+  bottom: 54%;
+  left: 32.5%;
+}
+.code-305 {
+  bottom: 48%;
+  left: 32.5%;
+}
+.code-306 {
+  bottom: 42%;
+  left: 32.5%;
+}
+.code-307 {
+  bottom: 36%;
+  left: 32.5%;
+}
+.code-308 {
+  bottom: 30%;
+  left: 32.5%;
+}
+.code-309 {
+  bottom: 72%;
+  left: 80.6%;
+}
+.code-310 {
+  bottom: 66%;
+  left: 80.6%;
+}
+
+.code-401 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-402 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-403 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-404 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-405 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-406 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-407 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-408 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-409 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-410 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-411 {
+  bottom: -100%;
+  left: 0px;
+}
+.code-412 {
+  bottom: -100%;
+  left: 0px;
+}
+
+.room-1{
+  bottom: 46%;
+  left: 69.7%;
+}
+
+.room-2{
+  bottom: 81.3%;
+  left: 59.5%;
+}
+
+.back-button {
+  position: fixed;
+  bottom: 45px;
+  right: 1%;
+  padding: 13px 4%;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}

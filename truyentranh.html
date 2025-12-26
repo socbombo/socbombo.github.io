@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Truyen tranh</title>
+    </head>
+    <body>
+        <iframe id="flipbook" style="width: 100%;height: 100%;" src="https://publuu.com/flip-book/4001/1704703" width="100%" height="800"></iframe>
+        <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var link = urlParams.get('link');
+            console.log(link);
+            if (link) {
+                var flipbook = document.getElementById('flipbook');
+                flipbook.src = "https://publuu.com/flip-book/"+link;
+            }
+        </script>
+    </body>
+</html>

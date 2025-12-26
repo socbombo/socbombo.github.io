@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sóc Bom Bo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="https://naver.github.io/egjs-view360/release/latest/css/view360.min.css" />
+    <script src="https://naver.github.io/egjs-view360/release/4.0.0-beta.7/view360.pkgd.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/file3d.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <link rel="icon" href="assets/only_logo.ico" type="image/x-icon">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body class="bgbody bg-gray-100 min-h-screen" style="overflow:auto">
+    <script type="module" src="src/settings.js"></script>
+    <script type="module" src="src/file3d.js"></script>
+    <script type="module" src="src/common.js"></script>
+    <div id="fullmap" class="fullmapDiv"></div>
+
+    <header class="mainheader fixed w-full top-0 z-50 bg-black/70 backdrop-blur-sm shadow-lg">
+        <header class="mainheader fixed w-full top-0 z-50 bg-black/70 backdrop-blur-sm shadow-lg">
+            <nav class="container mx-auto flex justify-between items-center">
+                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-0 md:space-x-4 items-center">
+                    <button style="height: 30px;" class="flex items-center justify-center space-x-2 btn-grad360 w-full md:w-auto"
+                        onclick="window.location.href='map360.html'">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M12 2a10 10 0 100 20 10 10 0 100-20zM2 12h20M12 2v20" />
+                        </svg>
+                        <span><b>360</b></span>
+                    </button>
+                    <button onclick="document.getElementById('popup').classList.remove('hidden')" style="height: 30px;" class="flex items-center justify-center space-x-2 btn-grad w-full md:w-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                        <span><b>3D</b></span>
+                    </button>
+                </div>
+                <div class="space-x-0">
+                    <button id="btnHome" class="px-4 py-2 rounded-lg hover:bg-orange-700 hover:text-white font-medium" onclick="window.location.href='index.html'">
+                        Trang chủ
+                    </button>
+                    <button id="btnInfo" class="px-4 py-2 rounded-lg hover:bg-orange-700 hover:text-white font-medium" onclick="window.location.href='info.html'">
+                        Thông tin
+                    </button>
+                    <button id="btnMap" class="px-4 py-2 rounded-lg hover:bg-orange-700 hover:text-white font-medium">
+                        Bản đồ
+                    </button>
+                    <button id="btnSttings" class="px-4 py-2 rounded-lg hover:bg-orange-700 hover:text-white font-medium" onclick="document.getElementById('settings-modal').classList.remove('hidden')">
+                        Cài đặt
+                    </button>
+                    <button id="btnguide" class="px-4 py-2 rounded-lg hover:bg-orange-700 hover:text-white font-medium">
+                        Hướng dẫn
+                    </button>
+                </div>
+            </nav>
+        </header>
+    </header>
+    <main style="overflow-y:auto; color: white;">
+        <div class="info-content" style="max-height: 70vh; overflow-y: auto; -webkit-overflow-scrolling: touch; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: #666666 #ffffff;">
+            <h1 id="info_1" class="ch1">Khu Bảo Tồn Văn Hóa Dân Tộc S'Tiêng : sóc Bom Bo</h1>
+    
+            <h2 class="ch2" id="info_2">Giới Thiệu</h2>
+            <p id="info_3">Khu bảo tồn văn hóa dân tộc S'tiêng Sóc Bom Bo gồm 2 khu vực. Nhà đón tiếp phía trong có phòng trưng bày. Đây là khu vực nằm giữa đoạn đường chính 11m (đường lớn từ đường ĐT 760 rẽ vào qua cổng chào Khu bảo tồn) với quy mô khoảng 1200 m², kiến trúc cây xanh cảnh quan được thiết kế theo hình chữ U với các không gian sân vườn, cảnh quan ở giữa. Với các cửa lớn thuận lợi cho việc trưng bày, giới thiệu những sản phẩm và những nét độc đáo của dân tộc vùng cao. Kiểu kiến trúc đơn giản, hòa nhập và tạo sự gần gũi với thiên nhiên môi trường.</p>
+        
+            <h2 id="info_4" class="ch2">Khu Vực Sân Lễ Hội</h2>
+            <p id="info_5">Phía trên là khu vực sân lễ hội gồm các công trình xây dựng kèm theo:</p>
+            
+            <ul>
+                <li>
+                    <h3 id="info_6">- Nhà Dài</h3>
+                    <p id="info_7">Một nét văn hóa mang đậm bản sắc vùng cao, nhà dài với thiết kế kiến trúc một tầng, chiều rộng khoảng 15m, chiều dài khoảng 35m với mái 2 dốc phủ gần xuống mặt đất. Không gian phía trong được bố trí rộng rãi, không hạn chế. Nơi đây được bố trí để phục vụ các lễ hội truyền thống của dân tộc Bom Bo với lễ hội trọi trâu. Hai nhà dài quay mặt vào sân lớn, nơi sẽ diễn ra các hoạt động ngoài trời đặc sắc cũng như lễ hội trọi trâu điển hình.</p>
+                </li>
+                <li>
+                    <h3 id="info_8">- Khu Hoạt Động Ngoài Trời</h3>
+                    <p id="info_9">Nơi sinh hoạt cộng đồng của dân tộc S’Tiêng, nơi diễn ra các lễ hội, các hoạt động ca múa hát mang đậm bản sắc riêng trong quá trình hình thành và phát triển.</p>
+                </li>
+                <li>
+                    <h3 id="info_10">- Nhà Sinh Hoạt Cộng Đồng</h3>
+                    <p id="info_11">Để phục vụ nhu cầu văn hóa của nhân dân địa phương và du khách. Bao gồm 1 vườn cây xuân hồng và 1 nhà bán hàng lưu niệm bán các mặt hàng đặc trưng của người dân tộc S'Tiêng.</p>
+                </li>
+                <li>
+                    <h3 id="info_12">- Nhà Làng Nghề Truyền Thống</h3>
+                    <p id="info_13">Có 4 nghề truyền thống: dệt thổ cẩm, nghề đan gùi, nghề nấu rượu cần, nghề rèn. Trong đó: Nghề dệt thổ cẩm, nghề đan gùi, nghề nấu rượu cần đã được công nhận là di sản văn hoá phi vật thể.</p>
+                </li>
+            </ul>
+        
+            <h2 class="ch2" id="info_14">Bộ Công Cụ Âm Nhạc</h2>
+            <ul>
+                <li>
+                    <h3 id="info_15">Bộ Đàn Đá</h3>
+                    <p id="info_16">Chất liệu: đá ben, xuất xứ: đá Bù Đăng, trọng lượng: 20 tấn. Mỗi thanh 400-600 kg, kích thước dài từ 1m-1.6m. Các thanh có độ dài không bằng nhau, được công nhận kỷ lục gia lớn nhất năm 2022.</p>
+                </li>
+                <li>
+                    <h3 id="info_17">Bộ Cồng Chiêng</h3>
+                    <p id="info_18">Bộ cồng 6 cái, bộ chiêng 6 cái, nặng 160-700 kg. Chất liệu: đồng đỏ, thiếc. Được công nhận kỷ lục gia bộ cồng lớn nhất năm 2023.</p>
+                </li>
+            </ul>
+            <h2 class="ch2" id="info_19">Khu bảo tồn Văn hóa dân tộc S'tiêng, sóc Bom Bo vào tốp 50 công trình kiến trúc tiêu biểu do Hội kiến trúc sư Việt Nam bình chọn nhân dịp kỷ niệm 50 năm ngày giải phóng Miền Nam, thống nhất đất nước.</h2>
+        </div>
+    </main>
+    <img src="assets/images/UI/kientruc.jpg" alt="Image 1" style="width: 50%;height: 80%;margin: auto;margin-bottom: 30px;">
+    <img src="assets/images/UI/BangKhen.jpg" alt="Image 2" style="width: 80%;height: 80%;margin: auto;margin-bottom: 30px;">
+    <video style="width: 80%;height: 80%;margin: auto;margin-bottom: 30px;" controls loop>
+        <source src="assets/videos/gioithieu.mp4" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+        <video style="width: 80%;height: 80%;margin: auto;margin-bottom: 30px;" controls loop>
+        <source src="assets/videos/video ve dieu ong.mp4" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+
+</html>
