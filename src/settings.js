@@ -1,5 +1,6 @@
 import { setSettings, getSetinngs } from "./common.js";
 import SoundManager from "./sounds.js";
+import { updateTooltips } from "./main.js";
 
 let textsChange = {};
 export let currentLanguage = "vn";
@@ -299,10 +300,13 @@ function ChangeLanguage(lang) {
       if (element) element.textContent = text.en;
     });
   }
+  
+  // Update tooltips immediately when language changes
+  updateTooltips();
+  
   console.log("Change language to", lang);
   if (soundManager.isPlaying()) {
     soundManager.changeSound();
-
   }
 }
 
@@ -314,4 +318,11 @@ export function GetLanguageTextWithId(id) {
   }
   console.warn("Text with id", id, "not found in language data");
   return "";
+}
+
+// Getter function to safely access currentLanguage
+export function getCurrentLanguage() {
+  if(currentLanguage) 
+  return currentLanguage;
+  return "vn";
 }

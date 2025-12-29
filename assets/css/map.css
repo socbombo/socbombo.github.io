@@ -67,7 +67,7 @@
 }
 .rpin:hover {
   cursor: pointer;
-  transform: translateX(-50%) scale(2.5);
+  transform: translateX(-50%) scale(1.5);
 }
 .code-warszawa {
   bottom: 55.9282%;

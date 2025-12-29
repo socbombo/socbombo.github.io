@@ -1,8 +1,21 @@
-import { isPlanet, isVR } from "./settings.js";
+import { isPlanet, isVR, getCurrentLanguage } from "./settings.js";
 var isMute = false;
 var isEnglish = false;
 
 var refrestCount = 0;
+
+let imageMessage = [
+  {
+    name: "001",
+    vn: "Cổng chào",
+    en: "Welcome Gate",
+  },
+  {
+    name: "030",
+    vn: "Hướng đi lên",
+    en: "Upward Direction",
+  }
+]
 
 let pinImage = ["002", "007"];
 let pinImage1 = [
@@ -207,6 +220,34 @@ function CreatePin(id, parent, isImage, imageIndex, listIndex = 0) {
   const pin = document.createElement("a");
   pin.id = id;
   pin.className = `rpin code-${id}`;
+
+  // // Check if pin name matches any imageMessage name and create tooltip
+  const matchingMessage = imageMessage.find(msg => msg.name === id);
+  if (matchingMessage) {
+    const tooltip = document.createElement("div");
+    tooltip.className = "pin-tooltip";
+    tooltip.style.position = "absolute";
+    tooltip.style.bottom = "100%";
+    tooltip.style.left = "50%";
+    tooltip.style.transform = "translateX(-50%)";
+    tooltip.style.background = "linear-gradient(135deg, #ff9800, #ffc107)";
+    tooltip.style.border = "2px solid white";
+    tooltip.style.color = "white";
+    tooltip.style.padding = "5px 10px";
+    tooltip.style.borderRadius = "4px";
+    tooltip.style.fontSize = "12px";
+    tooltip.style.whiteSpace = "nowrap";
+    tooltip.style.zIndex = "1000";
+    tooltip.style.marginBottom = "5px";
+    tooltip.style.pointerEvents = "none";
+    
+    // Set text based on language setting
+    const isEnglishLang = getCookie("isEnglish") === "true";
+    tooltip.textContent = isEnglishLang ? matchingMessage.en : matchingMessage.vn;
+    
+    // pin.style.position = "relative";
+    pin.appendChild(tooltip);
+  }
 
   if (isImage) {
     pin.style.background =
@@ -445,4 +486,18 @@ function setCookie(name, value, days) {
     expires = "; expires=" + date.toUTCString();
   }
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to update all tooltips when language changes
+export function updateTooltips() {
+  const tooltips = document.querySelectorAll('.pin-tooltip');
+  tooltips.forEach(tooltip => {
+    const pinElement = tooltip.parentElement;
+    if (pinElement && pinElement.id) {
+      const matchingMessage = imageMessage.find(msg => msg.name === pinElement.id);
+      if (matchingMessage) {
+        tooltip.textContent = getCurrentLanguage() === "en" ? matchingMessage.en : matchingMessage.vn;
+      }
+    }
+  });
 }
