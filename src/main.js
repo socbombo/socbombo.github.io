@@ -4,10 +4,8 @@ var isEnglish = false;
 
 var refrestCount = 0;
 
-let pinImage = [
-  "002",
-  "003",
-  "007",
+let pinImage = ["002", "007"];
+let pinImage1 = [
   "008",
   "009",
   "010",
@@ -30,6 +28,8 @@ let pinImage = [
   "411",
   "412",
 ];
+let pinImage2 = ["003"];
+
 // let rooms = ["1", "2"];
 let rooms = ["1"];
 let pin360 = [
@@ -52,6 +52,14 @@ let pin360 = [
   "119",
 ];
 let mapUrl = "assets/images/UI/Map.png";
+
+function getImagesListId(listIndex) {
+  return `images-list-${listIndex}`;
+}
+
+function dispatchImagePinClick(detail) {
+  window.dispatchEvent(new CustomEvent("imagePinClick", { detail }));
+}
 
 window.addEventListener("resize", () => {
   Resize();
@@ -106,22 +114,28 @@ function LoadPage() {
       "214",
       "215",
       "216",
-        "301",
-  "302",
-  "303",
-  "304",
-  "305",
-  "306",
-  "307",
-  "308",
-  "309",
-  "310",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
     ];
     pin360 = [
       // "032",
       // "033",
       //  "035",
-        "102", "103", "110", "112", "116", "117"];
+      "102",
+      "103",
+      "110",
+      "112",
+      "116",
+      "117",
+    ];
     // CreateBackButton(true, document.body);
   } else {
     mapUrl = "assets/images/UI/Room2.jpeg";
@@ -162,20 +176,34 @@ function CreateMap(room) {
     pin360.forEach((id) => {
       CreatePin(id, mapDiv);
     });
-    pinImage.forEach((id, index) => {
-      CreatePin(id, mapDiv, true, index);
+    pinImage.forEach((id, imageIndex) => {
+      CreatePin(id, mapDiv, true, imageIndex, 0);
     });
+
+    // Optional second image list (pinImage1)
+    if (Array.isArray(pinImage1) && pinImage1.length) {
+      pinImage1.forEach((id, imageIndex) => {
+        CreatePin(id, mapDiv, true, imageIndex, 1);
+      });
+    }
+    if (Array.isArray(pinImage2) && pinImage2.length) {
+      pinImage2.forEach((id, imageIndex) => {
+        CreatePin(id, mapDiv, true, imageIndex, 2);
+      });
+    }
+
     rooms.forEach((id) => {
       CreateDoor(id, mapDiv, true);
     });
 
     // Append the mapDiv to the body or a specific container
     document.body.appendChild(mapDiv);
-    CreateImagesList(pinImage);
+
+    CreateImagesLists([pinImage, pinImage1, pinImage2]);
     mappage = mapDiv;
   }
 }
-function CreatePin(id, parent, isImage, index) {
+function CreatePin(id, parent, isImage, imageIndex, listIndex = 0) {
   const pin = document.createElement("a");
   pin.id = id;
   pin.className = `rpin code-${id}`;
@@ -185,13 +213,23 @@ function CreatePin(id, parent, isImage, index) {
       "url('/assets/images/UI/PinImage.png') no-repeat center center";
     pin.style.backgroundSize = "contain";
     pin.addEventListener("pointerdown", (e) => {
-      var viewer = new Viewer(document.getElementById("images-list"), {
+      const listId = getImagesListId(listIndex);
+      const listEl = document.getElementById(listId);
+      if (!listEl) {
+        console.warn("Image list not found:", listId);
+        return;
+      }
+
+      dispatchImagePinClick({ listIndex, imageIndex, id });
+      console.log("imagePinClick", { listIndex, imageIndex, id });
+
+      var viewer = new Viewer(listEl, {
         hidden: function () {
           viewer.destroy();
         },
       });
       viewer.show();
-      viewer.view(index);
+      viewer.view(imageIndex);
     });
   } else {
     pin.addEventListener("pointerdown", (e) => {
@@ -308,25 +346,38 @@ function CreateDoor(id, parent) {
   parent.appendChild(pin);
 }
 
-function CreateImagesList(pinImage) {
+function CreateImagesList(listIndex, images) {
+  const containerId = `images-list-container-${listIndex}`;
+  const existing = document.getElementById(containerId);
+  if (existing) existing.remove();
+
   const div = document.createElement("div");
+  div.id = containerId;
   div.style.display = "none";
 
   const ul = document.createElement("ul");
-  ul.id = "images-list";
+  ul.id = getImagesListId(listIndex);
   div.appendChild(ul);
 
-  pinImage.forEach((id) => {
+  (images || []).forEach((id) => {
     const li = document.createElement("li");
     const img = document.createElement("img");
-    img.id = "image-" + id; // Set the ID
-    img.src = "assets/images/360/" + id + ".jpg"; // Set the source
-    img.alt = "Picture"; // Set the alt text
+    img.id = `image-${listIndex}-${id}`;
+    img.src = "assets/images/360/" + id + ".jpg";
+    img.alt = "Picture";
     li.appendChild(img);
     ul.appendChild(li);
   });
 
   document.body.appendChild(div);
+}
+
+function CreateImagesLists(lists) {
+  (lists || []).forEach((images, listIndex) => {
+    if (Array.isArray(images) && images.length) {
+      CreateImagesList(listIndex, images);
+    }
+  });
 }
 
 function Load360(img) {
