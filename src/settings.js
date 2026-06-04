@@ -1,6 +1,5 @@
 import { setSettings, getSetinngs } from "./common.js";
 import SoundManager from "./sounds.js";
-import { updateTooltips } from "./main.js";
 
 let textsChange = {};
 export let currentLanguage = "vn";
@@ -302,7 +301,9 @@ function ChangeLanguage(lang) {
   }
   
   // Update tooltips immediately when language changes
-  updateTooltips();
+  if (typeof window.updateTooltips === "function") {
+    window.updateTooltips();
+  }
   
   console.log("Change language to", lang);
   if (soundManager.isPlaying()) {

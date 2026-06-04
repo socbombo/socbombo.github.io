@@ -8,10 +8,24 @@ document.getElementById("btnguide").addEventListener("click", function () {
 });
 
 function CreateMap() {
+  if (document.getElementById("onlymap")) {
+    return;
+  }
   var mapDiv = document.createElement("div");
   mapDiv.id = "onlymap";
   mapDiv.classList.add("fullmap");
   document.getElementById("fullmap").appendChild(mapDiv);
+
+  // Fix leaflet default marker icon paths
+  if (typeof L !== 'undefined' && L.Icon && L.Icon.Default) {
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: 'marker-icon.png',
+      iconUrl: 'marker-icon.png',
+      shadowUrl: 'marker-shadow.png',
+    });
+  }
+
   // Initialize the map and set its view
   var map = L.map("onlymap").setView([11.83931, 107.192852], 17); // Coordinates for Londongeo:11.839310,107.192852?z=17https://www.openstreetmap.org/?mlat=11.839310&mlon=107.192852#map=17/11.839310/107.192852
 

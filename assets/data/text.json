@@ -213,7 +213,15 @@
         "id": "info_19",
         "vn": "Khu bảo tồn Văn hóa dân tộc S'tiêng, sóc Bom Bo vào tốp 50 công trình kiến trúc tiêu biểu do Hội kiến trúc sư Việt Nam bình chọn nhân dịp kỷ niệm 50 năm ngày giải phóng Miền Nam, thống nhất đất nước.",
         "en": "The Cultural Preservation Area of the S'tiêng ethnic group, Bom Bo village, is among the top 50 outstanding architectural works selected by the Vietnam Association of Architects on the occasion of the 50th anniversary of the liberation of the South and the reunification of the country."
+    },
+    {
+        "id": "btnAssistant",
+        "vn": "Trợ lý lịch sử",
+        "en": "History Assistant"
+    },
+    {
+        "id": "btnChallenge",
+        "vn": "Thử thách",
+        "en": "Challenge"
     }
-    
-    
 ]

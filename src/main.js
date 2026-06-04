@@ -501,3 +501,4 @@ export function updateTooltips() {
     }
   });
 }
+window.updateTooltips = updateTooltips;

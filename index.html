@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sóc Bom Bo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/file3d.css">
@@ -30,7 +33,7 @@
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                             d="M12 2a10 10 0 100 20 10 10 0 100-20zM2 12h20M12 2v20" />
                     </svg>
-                    <span><b>360</b></span>
+                    <span class="hidden md:inline"><b>360</b></span>
                 </button>
                 <button onclick="document.getElementById('popup').classList.remove('hidden')" class="flex items-center justify-center space-x-2 btn-grad w-full md:w-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -38,7 +41,15 @@
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                             d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
-                    <span><b>3D</b></span>
+                    <span class="hidden md:inline"><b>3D</b></span>
+                </button>
+                <button onclick="window.open('https://chatgpt.com/g/g-6a1efeb4a2bc81918755b4d4a6459e81-tro-ly-lich-su-dia-phuong-soc-bom-bo', '_blank')" class="flex items-center justify-center space-x-2 btn-grad-assistant w-full md:w-auto">
+                    <i class="fa-solid fa-robot"></i>
+                    <span id="btnAssistant" class="hidden md:inline">Trợ lý lịch sử</span>
+                </button>
+                <button onclick="window.open('https://wayground.com/join?source=liveDashboard', '_blank')" class="flex items-center justify-center space-x-2 btn-grad-challenge w-full md:w-auto">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span id="btnChallenge" class="hidden md:inline">Thử thách</span>
                 </button>
             </div>
             <div class="space-x-0">
