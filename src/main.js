@@ -14,6 +14,16 @@ let imageMessage = [
     name: "030",
     vn: "Hướng đi lên",
     en: "Upward Direction",
+  },
+  {
+    name: "017",
+    vn: "Sân Lễ Hội",
+    en: "Festival Square",
+  },
+  {
+    name: "037",
+    vn: "Nhà Đón Tiếp",
+    en: "Reception House",
   }
 ]
 
@@ -240,11 +250,11 @@ function CreatePin(id, parent, isImage, imageIndex, listIndex = 0) {
     tooltip.style.zIndex = "1000";
     tooltip.style.marginBottom = "5px";
     tooltip.style.pointerEvents = "none";
-    
+
     // Set text based on language setting
     const isEnglishLang = getCookie("isEnglish") === "true";
     tooltip.textContent = isEnglishLang ? matchingMessage.en : matchingMessage.vn;
-    
+
     // pin.style.position = "relative";
     pin.appendChild(tooltip);
   }
